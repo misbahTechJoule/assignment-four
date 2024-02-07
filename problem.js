@@ -1,4 +1,3 @@
-// problem one
 function calculateMoney(tickets) {
   if (tickets < 0) {
     return "Number of tickets can not be negative. Please provide a postive number for tickets";
@@ -11,7 +10,6 @@ function calculateMoney(tickets) {
   return tickets * ticketPrice - totalCost;
 }
 
-// problem two
 function checkName(name) {
   if (typeof name !== "string") {
     return "invalid";
@@ -27,7 +25,6 @@ function checkName(name) {
   return "Bad Name";
 }
 
-// problem three
 function deleteInvalids(elements) {
   if (!Array.isArray(elements)) {
     return "The input is not an array. Please provide an array";
@@ -39,7 +36,6 @@ function deleteInvalids(elements) {
   });
 }
 
-// problem four
 function password(passwordObj) {
   if (
     !passwordObj.hasOwnProperty("name") ||
@@ -60,7 +56,6 @@ function password(passwordObj) {
   );
 }
 
-// problem five
 function monthlySavings(allPayments, livingCost) {
   if (!Array.isArray(allPayments) || typeof livingCost !== "number") {
     return "invalid input";
