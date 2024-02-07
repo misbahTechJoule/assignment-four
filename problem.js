@@ -11,4 +11,33 @@ function calculateMoney(tickets) {
   return tickets * ticketPrice - totalCost;
 }
 
-console.log(calculateMoney(-93));
+// problem two
+function checkName(name) {
+  if (typeof name !== "string") {
+    return "invalid";
+  }
+  const goodLetters = ["a", "y", "i", "e", "o", "u", "w"];
+  const lowerCaseName = name.toLowerCase();
+  const lastLetter = lowerCaseName[name.length - 1];
+  for (const goodLetter of goodLetters) {
+    if (goodLetter === lastLetter) {
+      return "Good Name";
+    }
+  }
+  return "Bad Name";
+}
+
+// problem three
+function deleteInvalids(elements) {
+  if (!Array.isArray(elements)) {
+    return "The input is not an array. Please provide an array";
+  }
+  return elements.filter((element) => {
+    if (typeof element === "number" && element !== NaN) {
+      return element;
+    }
+  });
+}
+
+// problem four
+function password() {}
