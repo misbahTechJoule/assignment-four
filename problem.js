@@ -60,4 +60,21 @@ function password(passwordObj) {
   );
 }
 
-console.log(password({ name: "rahat", birthYear: 200 }));
+// problem five
+function monthlySavings(allPayments, livingCost) {
+  if (!Array.isArray(allPayments) || typeof livingCost !== "number") {
+    return "invalid input";
+  }
+
+  const paymentsAfterTax = allPayments.map((payment) => {
+    if (payment >= 3000) {
+      return payment - payment * 0.2;
+    } else {
+      return payment;
+    }
+  });
+
+  const savings = paymentsAfterTax.reduce((a, b) => a + b) - livingCost;
+
+  return savings >= 0 ? savings : "earn more";
+}
