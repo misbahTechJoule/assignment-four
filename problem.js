@@ -40,4 +40,24 @@ function deleteInvalids(elements) {
 }
 
 // problem four
-function password() {}
+function password(passwordObj) {
+  if (
+    !passwordObj.hasOwnProperty("name") ||
+    !passwordObj.hasOwnProperty("siteName") ||
+    !passwordObj.hasOwnProperty("birthYear")
+  ) {
+    return "invalid";
+  } else if (passwordObj.birthYear.toString().length !== 4) {
+    return "invalid";
+  }
+  return (
+    passwordObj.siteName[0].toUpperCase() +
+    passwordObj.siteName.slice(1) +
+    "#" +
+    passwordObj.name +
+    "@" +
+    passwordObj.birthYear
+  );
+}
+
+console.log(password({ name: "rahat", birthYear: 200 }));
